@@ -1,12 +1,11 @@
 caminho >>> ..\..\..\escripto\acólito\caminho.txt%
-caminhomod >>> ..\..\..\escripto\acólito\caminho.txt
 versão > v0-0.0.0-0\
 correr >@> mkdir $(caminho)$(caminhomod)$(versão)%
 projecto >>> ..\..\..\escripto\acólito\ficheiro-construcção.txt
 caminho >$(projecto)> ..\..\..\escripto\acólito\caminho.txt
 sinal >$(projecto)> ..\..\..\escripto\acólito\sinal.txt
-receitu >$(projecto)> ..\..\..\escripto\acólito\receituário.txt
-construc >$(projecto)> ..\..\..\escripto\acólito\ficheiro-construcção.txt
+receituário >$(projecto)> ..\..\..\escripto\acólito\receituário.txt
+construcção >$(projecto)> ..\..\..\escripto\acólito\ficheiro-construcção.txt
 liga >$(projecto)> ..\..\..\escripto\acólito\ficheiro-ligação.txt
 reposit >$(projecto)> ..\..\..\escripto\acólito\ligação.txt
 subir >$(projecto)> ..\..\..\escripto\acólito\subir.txt
