@@ -30,10 +30,16 @@
 #define differente juntar_(não, igual)
 #define differe differente
 
+#define incrementa(valôr) valôr++;
+#define decrementa(valôr) valôr--;
+
+#define incrementa_por(valôr, incremento) valôr += incremento;
+#define decrementa_por(valôr, incremento) valôr -= incremento;
+
 #define zero 0
 
 /* DEFINIÇÕES CONDICIONAIS */
-#define ir_ao goto
+#define ir_ao(onde) goto onde;
 
 #define se(condição) if(condição)
 #define ou_se(condição) else se(condição)
@@ -62,8 +68,9 @@
 #define devolve(algo) retorna(algo)
 
 /* CONSTANTES LINHAIS */
-#define linha_salta '\n'
-#define linha_tabulação
+#define nil_linha '\0'
+#define salta_linha '\n'
+#define linha_tabulação '\t'
 
 /* Tipos customizados */
 typedef void Vago;

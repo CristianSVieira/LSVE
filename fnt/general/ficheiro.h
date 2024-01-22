@@ -10,7 +10,7 @@
 #define ficheiro_modo_leitura "r"
 #define ficheiro_modo_leitura_binária "rb"
 
-#define ficheiro_final inválido
+#define fim_do_ficheiro inválido
 
 Linha* ficheiro_ler_linhas(Linha caminho);
 
