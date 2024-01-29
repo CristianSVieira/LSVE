@@ -2,13 +2,12 @@
 #include "desbraga.h"
 
 #include <stdio.h>
-#include <stdlib.h>
 
 Algum allocar_memória(Tamanho tamanho) {
     Algum ponteiroAllocado = malloc(tamanho);
     se(o ponteiroAllocado fôr iqual a nil) {
         MENSAGEM_DE_DESBRAGA("Não se pôde alocar %zu digbis.\n", tamanho);
-        abort();
+        quebra_o_programa();
     }
 
     devolve(ponteiroAllocado)
@@ -24,7 +23,7 @@ Algum allocar_memória_pré_enchida(Tamanho tamanho_allocação, Tamanho multipl
     Algum ponteiroPré_enchido = calloc(tamanho_allocação, multiplicador);
     se(o ponteiroPré_enchido fôr iqual a nil) {
         MENSAGEM_DE_DESBRAGA("Não se pôde preêncher com allocação %zu digbis.\n", (tamanho_allocação * multiplicador));
-        abort();
+        quebra_o_programa();
     }
 
     devolve(ponteiroPré_enchido)
@@ -35,7 +34,7 @@ Algum re_allocar_memória(Algum ponteiro, Tamanho tamanho) {
 
     se(o ponteiroRe_allocado fôr iqual a nil) {
         MENSAGEM_DE_DESBRAGA("Não se pôde re-alocar %zu digbis.\n", tamanho);
-        abort();
+        quebra_o_programa();
     }
 
     devolve(ponteiroRe_allocado)
@@ -46,7 +45,7 @@ Vago des_allocar_memória(Algum ref ponteiro) {
 
     se(o ponteiroDes_allocado fôr iqual nil) {
         MENSAGEM_DE_DESBRAGA("Não se deve des-allocar nil.");
-        abort();
+        quebra_o_programa();
     }
 
     free(ponteiroDes_allocado);
