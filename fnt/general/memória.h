@@ -2,7 +2,6 @@
 #define LSVE_CBÇ_MEMÓRIA
 
 #include "general.h"
-#include <stddef.h>
 
 Algum allocar_memória(Tamanho tamanho);
 Algum allocar_memória_pré_enchida(Tamanho tamanho_allocação, Tamanho tamanho_tipo);

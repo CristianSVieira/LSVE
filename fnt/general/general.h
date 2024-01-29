@@ -1,9 +1,11 @@
 #ifndef LSVE_CBÇ_GENERAL
 #define LSVE_CBÇ_GENERAL
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
 
+#define numero_da_sorte 20231210
 #define origem main
 #define matrice(matrice, índice) matrice[índice]
 
@@ -12,6 +14,12 @@
 /* DEFINIÇÕES FUNCCIONAIS */
 #define juntar(a, b) a##b
 #define juntar_(a, b) juntar(a, b) // O acolhido de cima. Útil quando os parâmetros outras definições.
+
+
+/* DEFINIÇÕES DE VISIBILIDADE */
+#define privado static
+#define exclusivo privado
+#define público 
 
 /* DEFINIÇÕES DE SUPORTE LINGÜÍSTICO */
 #define a

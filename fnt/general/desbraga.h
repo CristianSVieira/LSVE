@@ -2,6 +2,7 @@
 #define LSVE_CBÇ_DESBRAGA
 
 #include "general.h"
+#include <stdlib.h>
 
 //#if defined(DESBRAGA) && DESBRAGA > 0
 
@@ -19,9 +20,7 @@ __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__); \
 LINHA_SALTAR(); \
 LINHA_SALTAR()
 
-Vago quebra_o_programa(Vago) {
-	abort();
-}
+Vago quebra_o_programa(Vago);
 
 //#else
 //#define DESBRAGA_MENSAGEM(formato, ...) /* Faz nada em modo público */

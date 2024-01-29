@@ -4,7 +4,7 @@
 #include "general.h"
 #include "teclado/ASCII.h"
 
-#include <stdlib.h>
+#include "desbraga.h"
 
 typedef struct Pilha_Conteúdo {
     Integral posição;
@@ -25,4 +25,4 @@ typedef struct Pilha {
 Pilha construir_pilha(Tamanho tamanhoDaPilha, Tamanho tamanhoDoObjecto);
 Vago introduzir_à_pilha(Pilha ref pilha, Algum objecto, Tamanho tamanhoDoObjecto);
 
-#endif // LSVE_CBÇ_PILHA
+#endif //LSVE_CBÇ_PILHA

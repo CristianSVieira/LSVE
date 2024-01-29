@@ -1,6 +1,5 @@
 #include "pilha.h"
 #include "memória.h"
-#include "desbraga.h"
 
 /* A quantidade de objectos da pilha é contada da mesma forma que os índices das matrices */
 Pilha construir_pilha(Tamanho quantidadeDeObjectosDaPilha, Tamanho tamanhoDoObjecto) {
@@ -8,7 +7,7 @@ Pilha construir_pilha(Tamanho quantidadeDeObjectosDaPilha, Tamanho tamanhoDoObje
 
 	pilhaConstruída.quantidadeDeItens = quantidadeDeObjectosDaPilha;
 	pilhaConstruída.tamanho = pilhaConstruída.quantidadeDeItens * tamanhoDoObjecto;
-	pilhaConstruída.objecto = allocar_memória_pré_enchida(tamanho_de(Pilha_Conteúdo), tamanhoDoObjecto);
+	pilhaConstruída.objecto = allocar_memória(quantidadeDeObjectosDaPilha * tamanho_de(Pilha_Conteúdo));
 
 	pilhaConstruída.índice = (Integral) quantidadeDeObjectosDaPilha - 1;
 
@@ -31,7 +30,7 @@ Vago introduzir_à_pilha(Pilha ref pilha, Algum objecto, Tamanho tamanhoDoObject
 	Tamanho tamanhoDaPilha = 0;
 
 	Integral índiceAnterior = pilha->índice;
-	pilha->índice = pilha->quantidadeDeItens;
+	pilha->índice = pilha->quantidadeDeItens - 1;
 
 	Pilha cópia = *pilha;
 
