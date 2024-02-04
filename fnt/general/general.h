@@ -6,6 +6,8 @@
 #include <stddef.h>
 
 #define numero_da_sorte 20231210
+#define numero_do_azar 20191201
+
 #define origem main
 #define matrice(matrice, índice) matrice[índice]
 

@@ -20,6 +20,8 @@ __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__); \
 LINHA_SALTAR(); \
 LINHA_SALTAR()
 
+#define se_nil_quebra(algo) se (algo fôr iqual a nil) quebra_o_programa();
+
 Vago quebra_o_programa(Vago);
 
 //#else

@@ -24,6 +24,9 @@ Linha* ficheiro_ler_linhas(Linha caminho)
 {
     ficheiro_caminho = caminho;
     TÓPICO_DE_DESBRAGA("Ficheiro a ser lido %s", ficheiro_caminho);
+    
+    se_nil_quebra(caminho)
+
     ficheiro = fopen(ficheiro_caminho, ficheiro_modo_leitura);
 
     se(o ficheiro é iqual a nil) { TÓPICO_DE_DESBRAGA("O ficheiro %s não foi encontrado, ou está ocupado.", ficheiro_caminho); quebra_o_programa(); }

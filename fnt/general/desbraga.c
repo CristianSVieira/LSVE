@@ -1,5 +1,5 @@
 #include "desbraga.h"
 
 Vago quebra_o_programa(Vago) {
-	 abort();
+	 exit(numero_do_azar);
 }
