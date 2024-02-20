@@ -13,10 +13,35 @@
 #define fim_do_ficheiro inválido
 
 #pragma region ficheiro_ler_linhas
+/// <summary>
+/// Lê todas as linhas de um ficheiro dado.
+/// </summary>
+/// <param name="caminho"></param>
+/// <returns>Motrice de linhas</returns>
 Linha* ficheiro_ler_linhas(Linha caminho);
+/// <summary>
+/// Processa o charactére lido.
+/// Avalia o charactére e decide quais outras funcções utilizar 
+/// para manipular os recursos internos para a leitura do ficheiro.
+///
+/// </summary>
+/// <returns></returns>
 Vago ficheiro_ler_linhas__processar_charactére_lido();
+/// <summary>
+/// Processamento do charactére-salta-linhas.
+/// </summary>
+/// <returns></returns>
 Vago ficheiro_ler_linhas__processar_salta_linha();
+/// <summary>
+/// Processamento de um charactére qualquer. Texto, em geral.
+/// </summary>
+/// <returns></returns>
 Vago ficheiro_ler_linhas__processar_charactére_qualquer();
+/// <summary>
+/// Limpa os recursos usados para a leitura do ficheiro
+/// para a próxima leitura. 
+/// </summary>
+/// <returns></returns>
 Vago ficheiro_ler_linhas__limpar();
 #pragma endregion // ficheiro_ler_linhas
 

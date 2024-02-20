@@ -38,7 +38,7 @@ Linha* ficheiro_ler_linhas(Linha caminho)
     linhaProcessada = allocar_memória(tamanho_de(Charactére) * tamanhoDaPilha + 1);
     i_linhaProcessada é igual a zero;
 
-    quando(1) {
+    sísifo {
         introduzir_à_pilha(&pilha, fgetc(ficheiro), (Tamanho) tamanho_de(Charactére));
         charactéreLido = (Charactére) pilha.objecto[pilha.índice].conteúdo;
 
@@ -64,7 +64,7 @@ Vago ficheiro_ler_linhas__processar_charactére_lido() {
             TÓPICO_DE_DESBRAGA("%s lido! :)", ficheiro_caminho);
             quebra
         }
-        norma: {
+        norma : {
             ficheiro_ler_linhas__processar_charactére_qualquer();
 
             MENSAGEM_DE_DESBRAGA("%d %d %c, %c, %c", pilha.índice, pilha.objecto[pilha.índice].posição, charactéreLido, (Charactére)pilha.objecto[1].conteúdo, (Charactére)pilha.objecto[2].conteúdo);
@@ -100,6 +100,3 @@ Vago ficheiro_ler_linhas__limpar() {
     fclose(ficheiro);
 }
 #pragma endregion ficheiro_ler_linhas
-
-
-

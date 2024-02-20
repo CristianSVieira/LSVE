@@ -5,25 +5,45 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#define numero_da_sorte 20231210
-#define numero_do_azar 20191201
+/* Funcções d'usos generais applicadas a qualquer programa. */
+#pragma region /* DEFINIÇÕES */
 
+#pragma region /* VILANTINAS */
+
+// Não têm funcionalidades quaisquer, são só pessoalidades que me gosto pôr no meio do código.
+// Meu programa, minhas brincadeirinhas, tá bem? :)
+
+#define numero_da_origem        20180917    // Data dos arredores (não lembro ao certo) da origem! :+)
+#define numero_do_azar         -20191101    // Data dos arredores (também não me lembro) do fim...:+/
+#define numero_da_sorte         20231210    // Dia do reinício. :+D Data seguinte de fim inexistente.
+
+#pragma endregion
+#pragma region /* PORTUGUESAÇÕES */
+
+// Obrigatoriedades inalteráveis da linguagem, adaptadas ao português.
+
+// Main, por exemplo, é obrigatório. É o nome que se exige à funcção principal. 
+// Com a definição, pode-se alterar.
 #define origem main
 #define matrice(matrice, índice) matrice[índice]
-
 #define tamanho_de(tipo) sizeof(tipo)
+#define retorna(algo) return algo;
+#define devolve(algo) retorna(algo)
 
-/* DEFINIÇÕES FUNCCIONAIS */
-#define juntar(a, b) a##b
-#define juntar_(a, b) juntar(a, b) // O acolhido de cima. Útil quando os parâmetros outras definições.
+#define ref *
 
+#define nil zero // Nil para ponteiros.
+#define inválido (-1) // Posição inválida para matriz.
 
-/* DEFINIÇÕES DE VISIBILIDADE */
-#define privado static
-#define exclusivo privado
-#define público 
+#define nile(tipo) (tipo) { 0 } // Nil para estructuras, sem ponteiros.
 
-/* DEFINIÇÕES DE SUPORTE LINGÜÍSTICO */
+/* CONSTANTES LINHAIS */
+#define nil_linha '\0'
+#define salta_linha '\n'
+#define linha_tabulação '\t'
+
+#pragma region /* SUPORTE LINGÜÍSTICO */
+
 #define a
 #define à
 #define ao
@@ -31,6 +51,25 @@
 #define é
 #define fôr
 #define de
+
+#pragma endregion /* SUPORTE LINGÜÍSTICO */
+
+#pragma endregion
+#pragma region /* FUNCCIONAIS */
+
+// Estas têm alguma funccionalidade a outras definições, utilidades a elas, geralmente. 
+#define juntar(a, b) a##b
+#define juntar_(a, b) juntar(a, b) // O acolhido de cima. Útil quando os parâmetros são outras definições.
+
+#pragma endregion
+#pragma region /* VISIBILIDADE */
+
+#define privado static
+#define exclusivo privado
+#define público 
+
+#pragma endregion
+#pragma region /* EXPRESSÕES NUMÉRICAS */
 
 #define igual =
 #define iqual juntar_(igual, igual)
@@ -48,7 +87,9 @@
 
 #define zero 0
 
-/* DEFINIÇÕES CONDICIONAIS */
+#pragma endregion
+#pragma region /* CONDICIONAIS */
+
 #define ir_ao(onde) goto onde;
 
 #define se(condição) if(condição)
@@ -64,36 +105,24 @@
 
 #define enquanto(condição) while(condição)
 #define quando enquanto
+#define sísifo quando(1)
 
 #define norma default
 
-#define ref *
+#pragma endregion
+#pragma region /* TIPOS */
 
-#define nil 0 // Nil para ponteiros.
-#define inválido (-1) // Posição inválida para matriz.
-
-#define nile(tipo) (tipo) { 0 } // Nil para estructuras, sem ponteiros.
-
-#define retorna(algo) return algo;
-#define devolve(algo) retorna(algo)
-
-/* CONSTANTES LINHAIS */
-#define nil_linha '\0'
-#define salta_linha '\n'
-#define linha_tabulação '\t'
-
-/* Tipos customizados */
-typedef void Vago;
-typedef void* Algum;
+typedef void Vago; // Vazío, nada, vago...
+typedef void* Algum; // Alguma coisa, um objecto qualquer...
 
 typedef char Charactére;
 typedef char* Linha;
-typedef int Integral;
+typedef int Integral; // Inteiro, Integral...
 
 typedef FILE Ficheiro;
 typedef size_t Tamanho;
 
-typedef enum { fal, vero } Dico; // Tipo dicotômico, sim ou não, verdadeiro ou falso.
+typedef enum { fal, vero } Dico; // Dicotômico, sim ou não, verdadeiro ou falso.
 
 /*
     Em alguns métodos, faz-se uso deste que enumera estructuras
@@ -104,18 +133,18 @@ typedef enum { fal, vero } Dico; // Tipo dicotômico, sim ou não, verdadeiro ou
     especificar como parâmetro pode lidar a têr o objecto
     da lista.
 
-    Métodos sem tratamento especial deve usar inteiro, somente.
+    Funcções sem tratamento especial deve usar inteiro, somente.
 */
 typedef enum {
     índice__primeiro = -1,
     índice__último = -2,
-    /*
-        "Qualquer" que for encontrado, geralmente usado quando
-        em conjunto a outros condicionais, em caso de
-        identificações repetidas.
-    */
+    // Índice qualquer, supõe-se que a funcção devolva
+    // o primeiro encontrado à frente. 
     índice__qualquer = -3,
 } Índice;
 
+#pragma endregion
+
+#pragma endregion /* DEFINIÇÕES */
 
 #endif // LSVE_CBÇ_GENERAL

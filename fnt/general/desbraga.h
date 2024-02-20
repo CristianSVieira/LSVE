@@ -20,8 +20,17 @@ __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__); \
 LINHA_SALTAR(); \
 LINHA_SALTAR()
 
+/// <summary>
+/// Quebra o programa se estiver nilo
+/// </summary>
+/// <param name="">Qualquer coisa que pode ser nilada</param>
 #define se_nil_quebra(algo) se (algo fôr iqual a nil) quebra_o_programa();
 
+/// <summary>
+/// Quebra tudo com e carimba o número do azar
+/// </summary>
+/// <param name=""></param>
+/// <returns></returns>
 Vago quebra_o_programa(Vago);
 
 //#else
